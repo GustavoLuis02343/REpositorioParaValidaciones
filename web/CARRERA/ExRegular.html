@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./ES.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Practica validacion</h1>
+    <form action="" method="get">
+        
+        <center><h2>Formulario de campos con expresiones regulares</h2>
+            <label for="username">Nombre de Usuario (5-15 caracteres alfanuméricos):</label><br>
+            <input type="text" id="input" name="username" 
+                   required pattern="^[a-zA-Z0-9]{5,15}" 
+                   required minlength="5"   maxlength="15" placeholder="Nombre">
+            <br><br>
+ 
+    
+            <label for="password">Contraseña (Ingresa al menos 8 caracteres, incluir mayúsculas, minúsculas, números y un carácter especial):</label><br>
+            <input type="password" id="password" name="password" 
+                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$" 
+                   title="Debe tener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una minúscula, un número y un carácter especial" 
+                   required minlength="8"  placeholder="Contraseña"
+                   required>
+            <br><br>
+
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" 
+                   pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                   title="Debe ser una dirección de correo electrónico válida" 
+                   required placeholder="Ingresa tu correo">
+            <br><br>
+
+            
+            <label for="Telefonico">Número de Teléfono (Formato internacional, hasta 15 dígitos):</label><br>
+            <input type="tel"  name="Telefonico" 
+                   pattern="^\+[1-9]\d{1,14}$" 
+                   title="Debe seguir el formato internacional, comenzando con el signo + y hasta 15 dígitos" 
+                   required  maxlength="15" placeholder="Numero Telefonico">
+            <br><br>
+
+            
+            <label for="dob">Fecha de Nacimiento (dia-mes-año):</label><br>
+            <input type="date" id="dob" name="dob" 
+                   pattern="^\d{4}-\d{2}-\d{2}$" 
+                   title="Debe estar en el formato YYYY-MM-DD" 
+                   required>
+            <br><br>
+
+          
+            <label for="zipcode">Código Postal (5 dígitos):</label><br>
+            <input type="text" id="zipcode" name="zipcode" 
+                   pattern="^\d{5}$" 
+                   title="Debe contener exactamente 5 dígitos" 
+                   maxlength="5"
+                   required>
+            <br><br>
+            <input type="submit" class="button" value="Enviar"
+            onclick="validacionPass()">
+            <script src="./main.js"></script>
+
+            
+            
+        </form>
+    </div>
+</body>
+</html>

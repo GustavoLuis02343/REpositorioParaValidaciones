@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ES.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Practica validacion</h1>
+        <h2 class="subtitle">Registro de usuario</h2>
+
+        <form action="" method="get">  
+            Nombre:
+  <input type="text" name="username"  required pattern="[A-Za-z0-9]+">
+  <input type="text" name="model" placeholder="Su modelo de coche"
+         required pattern="(A|a)(1|3|4|15)"
+         title="Modelos posibles: A1, A3, A4 y A15">
+         <input type="text" name="username" placeholder="ManzDev"
+         required pattern="[A-Za-z0-9]{5,40}"
+         title="Letras y números. Tamaño: 5-40">
+
+            <label for="numTrab">Numero de trabajador</label>
+            <input class="input" type="number"
+            placeholder="Numero de trabajador"
+            name="numTrab" id="numTrab" required>
+            
+            <label for="name">Nombre del usuario: </label>
+            <input type="text" class="input" required
+            placeholder="Nombre" maxlength="20">
+
+            <label for="app">Apellido paterno</label>
+            <input type="text" class="input" required
+            placeholder="Apellido paterno" maxlength="25">
+
+            <label for="edad">Edad: </label>
+            <input type="number" name="" class="input" required min="18" max="99"
+            placeholder="Edad" step="4">
+
+            <label for="apm">Apellido materno</label>
+            <input type="text" class="input" required
+            placeholder="Apellido materno" maxlength="25">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"
+            class="input" required maxlength="50" placeholder="Email">
+
+            <label for="pass">password:  </label>
+            <input type="password" class="input" minlength="8"
+            required placeholder="Password" maxlength="20">
+
+            <label for="pass2">confirmar Password  </label>
+            <input type="password" class="input" minlength="8"
+            required placeholder="confirmar password" maxlength="20"
+            name="pass2" id="pass2">
+
+
+
+            <input type="submit" class="button"
+            onclick="validacionPass()">
+            <script src="./main.js"></script>
+
+        </form>
+
+    </div>
+</body>
+</html>

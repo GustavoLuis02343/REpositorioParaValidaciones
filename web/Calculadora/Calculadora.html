@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Calculadora....</h1>
+        <h3 class="subtitle">Captura el valor 1</h3>
+        <input class="input" type="number" placeholder="Aqui anota algun numero" id="v1">
+        <h3 class="subtitle">Captura el valor 2</h3>
+        <input class="input" type="number" placeholder="Aqui anota algun numero"  id="v2"><br>
+
+        <div class="button-container">
+        <button class="button" onclick="calcular('sumar')">Sumar</button>
+        <button class="button" onclick="calcular('restar')">Restar</button>
+        <button class="button" onclick="calcular('multiplicar')">Multiplicar</button>
+        <button class="button" onclick="calcular('dividir')">Dividir</button>
+        </div>
+        <h3 class="subtitle" >Resultado</h3>
+        <h3 class="subtitle" id="res">.....</h3>
+
+
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <button class="button dropdown-button">Opciones</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="calcular('sumar')">Sumar</a>
+                    <a href="#" onclick="calcular('restar')">Restar</a>
+                    <a href="#" onclick="calcular('multiplicar')">Multiplicar</a>
+                    <a href="#" onclick="calcular('dividir')">Dividir</a>
+                </div>
+            </div>
+    </div>
+    <script src="./calculos.js"></script>
+</body>
+</html>
